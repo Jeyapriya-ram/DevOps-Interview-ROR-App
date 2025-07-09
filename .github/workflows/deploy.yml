@@ -21,3 +21,10 @@ jobs:
         cd infra
         terraform init
         terraform apply -auto-approve
+         - name: Setup kubeconfig
+      run: |
+        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name rails-eks-cluster
+
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl apply -f k8s/
