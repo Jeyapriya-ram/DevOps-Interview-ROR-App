@@ -32,7 +32,7 @@ step 4: Setup IAM Role for S3 Integration
       Create an IAM role for S3 access.
       Annotate my Kubernetes service account to use that IAM role.
 
-step 4: Deploy to EKS 
+step 5: Deploy to EKS 
      aws eks update-kubeconfig --region eu-north-1 --name rails-eks-cluster
    creating deployment, service and Ingress controller for one file
     deploy app to EKS
